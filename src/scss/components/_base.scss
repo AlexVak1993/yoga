@@ -1,0 +1,44 @@
+body {
+  font-family: $font-main;
+  font-size: $font-size;
+  color: $clr-black;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  color: $clr-primary;
+  font-weight: 500;
+}
+
+img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.ax-secondary-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 3.25rem;
+  }
+  @include desktop-sm {
+    font-size: 3.5rem;
+  }
+}
+
+.ax-secondary-caption {
+  font-size: 1.425rem;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+.main-cta {
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 10px 20px 0px;
+  border-radius: 40px;
+  margin: auto;
+  padding: 18px 30px 18px 30px;;
+  font-size: 1rem;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  background-color: $clr-primary;
+  transition: .3s !important;
+  color: $clr-light;
+
+  &:hover {
+    background-color: $clr-sub;
+    color: $clr-light;
+  }
+
+  &--card-mini {
+    padding: 7px 20px 5px 20px;
+    text-align: center;
+  }
+}
+
+.sub-cta {
+  background-color: $clr-sub;
+
+  &:hover {
+    background-color: $clr-primary;
+  }
+}

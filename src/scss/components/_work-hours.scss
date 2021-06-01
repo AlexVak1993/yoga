@@ -1,0 +1,85 @@
+.work-hours {
+  min-height: 785px;
+  padding: 50px 0;
+  margin-bottom: 100px;
+  background-image: url("../images/home/beautiful-concentrated-woman-2.jpeg");
+  background-position: 100% -170px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include tablet {
+    align-items: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/home/wave-bg-3.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+
+  &__wrapper {
+    z-index: 2;
+  }
+
+  &__content {
+
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  &__schedule {
+    width: 100%;
+    margin: 40px auto 60px;
+    padding: 20px;
+    font-size: 1.25rem;
+    border-radius: 40px;
+    list-style: none;
+    background: $clr-light;
+    color: $clr-primary;
+
+    @include mobile-lg {
+      width: 85%;
+    }
+    @include tablet {
+      margin: 0 0 60px;
+      width: initial;
+    }
+
+    li {
+      padding: 12px 0;
+      display: flex;
+      flex-direction: column;
+
+      @include mobile-md {
+        flex-direction: row;
+      }
+
+      &:not(:last-of-type) {
+
+        border-bottom: 1px solid #EBE1E9;
+      }
+
+      span:nth-child(1) {
+        margin-bottom: 10px;
+        @include mobile-md {
+          margin-bottom: 0;
+        }
+      }
+      span:nth-child(2) {
+        @include mobile-md {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

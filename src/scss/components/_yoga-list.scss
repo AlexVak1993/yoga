@@ -1,0 +1,35 @@
+.yoga-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 40px;
+
+  @include mobile-lg {
+    flex-direction: row;
+  }
+  @include tablet {
+    flex-direction: column;
+  }
+  @include desktop-md {
+    flex-direction: row;
+  }
+
+  &__item {
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $clr-primary;
+    margin-bottom: 8px;
+
+    @include mobile-lg {
+      flex: 0 0 calc(50% - 20px);
+    }
+
+    &::before {
+      content: '✓';
+      margin-right: 10px;
+      font-size: .8em;
+    }
+  }
+}

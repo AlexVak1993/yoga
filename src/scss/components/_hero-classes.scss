@@ -1,0 +1,30 @@
+.class-hero {
+  background-image: url('../images/classes/classes-wave-bg-4.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 60px;
+
+  @include desktop-sm {
+    margin-bottom: 110px;
+  }
+
+  &__container {
+    min-height: 320px;
+    display: flex !important;
+    justify-content: center;
+    align-items:  center;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 3.5rem;
+
+    @include tablet {
+      font-size: 3.75rem;
+    }
+    @include desktop-md {
+      font-size: 4.25rem;
+    }
+  }
+}

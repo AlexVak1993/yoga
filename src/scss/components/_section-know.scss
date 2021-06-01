@@ -1,0 +1,90 @@
+.section-know {
+  padding-bottom: 60px;
+  margin-bottom: 80px;
+  background-image: url('../images/home/wave-bg-1.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &__right-shape {
+    position: absolute;
+    left: 664px;
+    height: 567px;
+    width: 796px;
+    max-width: 796px;
+    top: 117px;
+  }
+
+  .ui.grid {
+    align-items: center;
+  }
+
+  &__image-block {
+    position: relative;
+    z-index: 1;
+
+    .image-block {
+      &__front {
+        visibility: hidden;
+      }
+      &__back {
+        visibility: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        @include tablet {
+          left: -30px;
+          bottom: -30px;
+        }
+        @include wide-screen-sm {
+          left: -80px;
+          bottom: -40px;
+        }
+      }
+    }
+  }
+
+  &__content-block {
+    position: relative;
+
+    .content-block {
+
+      &__items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 30px;
+        visibility: hidden;
+
+        @include desktop-md {
+          flex-direction: row;
+        }
+      }
+
+      &__item {
+        padding: 10px;
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+
+        .item {
+          &__image {
+            width: 40px;
+            margin-right: 20px;
+
+            @include desktop-md {
+              width: 62px;
+            }
+          }
+          
+          &__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

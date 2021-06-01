@@ -1,0 +1,92 @@
+.yoga-begin {
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  margin-bottom: 40px;
+
+  &__image-block {
+    position: relative;
+
+    .yoga-image-block {
+      &__bgr {
+        position: absolute;
+        top: 25%;
+        left: -10%;
+        width: 550px;
+        max-width: 550px;
+        height: 350px;
+
+        @include mobile-lg {
+          left: 0;
+        }
+        @include tablet {
+          left: -40%;
+          top: 0;
+        }
+        @include desktop-sm {
+          top: 122px;
+          left: -83px;
+        }
+      }
+
+      &__loop {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+
+        @include mobile-lg {
+          top: 10%;
+        }
+
+        @include tablet {
+          top: 0;
+        }
+      }
+
+      &__palette {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile-lg {
+          flex-direction: row;
+        }
+
+        .palette {
+          &__double-col {
+            @include mobile-lg {
+              margin-right: 20px;
+            }
+          }
+
+          &__single-col {
+            @include mobile-lg {
+              align-self: stretch;
+            }
+          }
+
+          &__item {
+            border-radius: 40px;
+            overflow: hidden;
+            max-width: 250px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            position: relative;
+            visibility: hidden;
+
+            @include mobile-lg {
+              &--2 {
+                left: 10%;
+              }
+
+              &--3 {
+                top: 15%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

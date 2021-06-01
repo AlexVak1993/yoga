@@ -1,0 +1,98 @@
+.home-slider {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+  height: 930px;
+  background-image: url('../images/home/group-of-people-making-yoga-exercises-at-studio.jpeg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ui.ui.ui.container:not(.fluid) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/home/wave-bg-2.png');
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  .swiper {
+    &-container {
+      width: 100%;
+      height: 100%;
+      padding-bottom: 50px;
+      visibility: hidden;
+    }
+
+    &-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .swiper__card {
+        width: 100%;
+      }
+    }
+
+    &-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      bottom: 0;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color: #000;
+      opacity: 1;
+      background: $clr-light;
+      box-shadow: rgba(0, 0, 0, 0.23) 0px 10px 20px 0px;
+
+      @include tablet {
+        width: 12px;
+        height: 12px;
+      }
+  
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-pagination-bullet-active {
+      color: $clr-light;
+      background: $clr-primary;
+    }
+
+    &-card {
+      &__caption {
+        font-style: italic;
+        font-size: 1.75rem;
+      }
+      &__image {
+        margin-bottom: 25px;
+      }
+      &__name {
+        margin-bottom: 4px;
+        font-family: $font-title;
+        font-size: 1.25rem;
+      }
+      &__position {
+        color: $clr-primary;
+      }
+    }
+  }
+}

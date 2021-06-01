@@ -1,0 +1,247 @@
+@@include('./html-templates/_head.html',{
+'name':'Yogasan – Another Elementor Template Kit'
+})
+
+<main id="main">
+
+  <!-- hero section -->
+  @@include('./html-templates/_home-hero.html',{})
+
+  <!-- know about section -->
+  <section class="section section section-know">
+
+    <div class="ui two column stackable grid container">
+
+      <div class="column section-know__image-block">
+
+        <div class="ui image-block__front" id="image-block__front">
+          <img class="ui fluid image" src="images/home/beautiful-concentrated-woman-1.png">
+        </div>
+        <div class="ui image-block__back" id="image-block__back">
+          <img class="ui fluid image" src="images/home/elements-abstract-collection-shapes-1.png">
+        </div>
+
+      </div>
+
+      <div class="column section-know__content-block">
+
+        <div class="section-know__right-shape">
+          <img src="images/home/elements-abstract-collection-shapes-2.png" alt="">
+        </div>
+
+        <div class="ui">
+          <h2 class="ax-secondary-title" id="know-title">Know About Yogasan</h2>
+          <p class="ax-secondary-caption">Aenean nunc augue, volutpat id massa sed, facilisis efficitur nisl orci
+            nulla, efficitur id ante at, finibus consequat sapien. Nulla fermen vel purus at mollis sed malesuada
+            laoreet quam.</p>
+
+          <div class="content-block__items" id="content-block__items">
+
+            @@include('./html-templates/_content-block__item.html',{
+            'route':'home/icons/yoga-poses-1',
+            'title':'Strong Body Life',
+            'caption':'Nulla fermen purus'
+            })
+
+            @@include('./html-templates/_content-block__item.html',{
+            'route':'home/icons/yoga-poses-2',
+            'title':'Increased Flexibility',
+            'caption':'Nulla fermen purus'
+            })
+
+            @@include('./html-templates/_content-block__item.html',{
+            'route':'home/icons/yoga-poses-3',
+            'title':'Healthy Lifestyle',
+            'caption':'Nulla fermen purus'
+            })
+
+            @@include('./html-templates/_content-block__item.html',{
+            'route':'home/icons/yoga-poses-4',
+            'title':'Get Rid Of Stress',
+            'caption':'Nulla fermen purus'
+            })
+
+          </div>
+
+          <div class="content-block__btn" id="content-block__btn">
+            <a href="# " class="main-cta" id="hero-main-btn">KNOW MORE</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- our popular classes section -->
+  <section class="class-card class-card--bg1">
+    <div class="ui container">
+      <h2 class="ax-secondary-title" id="popular-classes-title">Our Most Popular Classes</h2>
+    </div>
+
+    <div class="ui four column doubling stackable grid container class-card__container" id="most-popular-classes">
+
+      @@include('./html-templates/_classes-card.html',{
+      'main-route':'classes-card-1',
+      'sub-route':'icons/yoga-poses-1',
+      'link-text':'Hatha Yoga',
+      'desc':'Yoga For Beginners',
+      'main-alt':'yoga photo',
+      'sub-alt':'yoga pose'
+      })
+
+      @@include('./html-templates/_classes-card.html',{
+      'main-route':'classes-card-2',
+      'sub-route':'icons/yoga-poses-2',
+      'link-text':'Kundalini',
+      'desc':'Increased Flexibility',
+      'main-alt':'yoga photo',
+      'sub-alt':'yoga pose'
+      })
+
+      @@include('./html-templates/_classes-card.html',{
+      'main-route':'classes-card-3',
+      'sub-route':'icons/yoga-poses-3',
+      'link-text':'Vinyasa',
+      'desc':'Balance Body & Mind',
+      'main-alt':'yoga photo',
+      'sub-alt':'yoga pose'
+      })
+
+      @@include('./html-templates/_classes-card.html',{
+      'main-route':'classes-card-4',
+      'sub-route':'icons/yoga-poses-4',
+      'link-text':'Advance',
+      'desc':'Yoga For Beginners',
+      'main-alt':'yoga photo',
+      'sub-alt':'yoga pose'
+      })
+
+    </div>
+
+  </section>
+
+  <!-- tutorial video section -->
+  @@include('./html-templates/_video-block.html',{})
+
+  <!-- where yoga begins section -->
+  @@include('./html-templates/_yoga-begin.html',{})
+
+  <!-- slider section -->
+  <section class="home-slider">
+    <div class="home-slider__overlay"></div>
+
+    <div class="ui container home-slider__content">
+      <div class="ui image centered" id="home-slider-icon">
+        <img class="animated-logo" src="images/home/icons/logo.png" alt="logo">
+      </div>
+      <h2 class="ax-secondary-title text-center" id="home-slider-title">What Our Client Says</h2>
+
+      <div class="swiper-container" id="home-slider-container">
+        <div class="swiper-wrapper">
+
+          @@include('./html-templates/_swiper-slide.html',{
+            'desc':'Duis vestibulum porta dictum. In ut diam nec magna aliquet eleifend in quis eros pellentesque rutrum tellus erat, ac iaculis neque placerat',
+            'route':'home/slider-icon-1.jpeg',
+            'name':'John Hamilton',
+            'pos':'Art Director'
+          })
+          @@include('./html-templates/_swiper-slide.html',{
+            'desc':'Duis vestibulum porta dictum. In ut diam nec magna aliquet eleifend in quis eros pellentesque rutrum tellus erat, ac iaculis neque placerat',
+            'route':'home/slider-icon-2.jpeg',
+            'name':'Ilon Musk',
+            'pos':'General Director'
+          })
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- our expert trainer section -->
+  <section class="trainers">
+    <div class="ui container trainers__title">
+      <h2 class="ax-secondary-title text-center" id="trainer-title">Meet Our Expert Trainers</h2>
+    </div>
+
+    <div class="ui three column stackable grid container trainers__card" id="trainer-card-container">
+      
+      @@include('./html-templates/_trainer-card.html',{
+        'route':'home/yoga-trainer-1.jpeg',
+        'name':'Sarah Michelle',
+        'pos':'Yoga Therapist'
+      })
+      @@include('./html-templates/_trainer-card.html',{
+        'route':'home/yoga-trainer-2.jpeg',
+        'name':'Eddie Wayne',
+        'pos':'Meditation'
+      })
+      @@include('./html-templates/_trainer-card.html',{
+        'route':'home/yoga-trainer-3.jpeg',
+        'name':'Layla Santiago',
+        'pos':'Pilates Instructor'
+      })
+
+    </div>
+
+    <div class="trainers__bg-animate">
+      <img class="image-rotated" src="images/home/elements-abstract-collection-shapes-4.png">
+    </div>
+  </section>
+
+  <!-- working hours section -->
+  @@include('./html-templates/_work-hours.html',{})
+
+  <!-- news from the blog section -->
+  <section class="blog-news">
+    <div class="ui container">
+      <h2 class="ax-secondary-title text-center" id="blog-news-title">Recent News From The Blog</h2>
+
+      <div class="blog-news__container" id="blog-news-container">
+
+        <a href="#" class="ui card blog-news__item blog-news__item--horiz1">
+
+          @@include('./html-templates/_blog-news-item.html',{
+            'route':'home/yoga-practice-pose-1.jpeg',
+            'date':'23 Feb 2021',
+            'name':'Vinyasa Yoga',
+            'title':'13 Major Yoga Mantras to Memorize'
+          })
+
+        </a>
+
+        <a href="#" class="ui card blog-news__item blog-news__item--horiz2">
+          @@include('./html-templates/_blog-news-item.html',{
+            'route':'home/yoga-practice-pose-2.jpeg',
+            'date':'23 Feb 2021',
+            'name':'Vinyasa Yoga',
+            'title':'The Transition into the Dream World'
+          })
+        </a>
+
+        <a href="#" class="ui card blog-news__item">
+          @@include('./html-templates/_blog-news-item.html',{
+            'route':'home/yoga-practice-pose-3.jpeg',
+            'date':'23 Feb 2021',
+            'name':'Meditation',
+            'title':'Which Yoga Hybrid Is Right For You?'
+          })
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- bottom waves section -->
+  <section class="bottom-waves">
+    <div class="ui image centered" id="bottom-waves-icon">
+      <img class="animated-logo" src="images/home/icons/logo.png" alt="logo">
+    </div>
+    <h2 class="bottom-waves__title text-center" id="bottom-waves-title">Yogasan</h2>
+  </section>
+
+</main>
+
+@@include('./html-templates/_script.html',{})

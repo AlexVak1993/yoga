@@ -1,0 +1,125 @@
+.blog-news {
+  padding: 50px 0;
+  background-image: url("../images/home/beautiful-concentrated-woman-3.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include tablet {
+    background-position: center left;
+  }
+
+  .ui.card>:first-child, .ui.cards>.card>:first-child {
+    border-radius: 40px 0 0 40px !important;
+
+    @include mobile-lg {
+      border-radius: 50% !important;
+    }
+  }
+  .ui.image img, .ui.image svg {
+    height: 100%;
+    object-fit: cover;
+
+    @include mobile-lg {
+      height: auto;
+    }
+  }
+
+  &__container {
+    margin: 50px 0;
+    position: relative;
+    background-image: url("../images/home/elements-abstract-collection-shapes-5.png");
+    background-position: 37% 22%;
+    background-repeat: no-repeat;
+    visibility: hidden;
+
+    @include desktop-md {
+      background-position: 37% 10%;
+    }
+  }
+
+  &__item {
+    width: 100% !important;
+    padding: 10px !important;
+    margin-bottom: 35px !important;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 40px !important;
+    flex-direction: row !important;
+    margin-left: auto !important;
+
+    @include mobile-lg {
+      padding: 20px 30px !important;
+    }
+    @include desktop-md {
+      width: 55% !important;
+    }
+
+    .blog-item {
+      &__image {
+        width: 60px;
+        background-color: transparent !important;  
+
+        @include mobile-lg {
+          width: 120px;
+          margin-right: 20px;
+        }
+      }
+      &__content {
+        border-top: none !important;
+      }
+      &__header {
+        display: flex !important;
+        flex-wrap: wrap;
+
+        .header-item {
+          &__image {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+          }
+          &__title {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: $clr-primary;
+          }
+        }
+      }
+      &__description {
+        font-size: 1.5rem;
+        color: $clr-black;
+        transition: .2s;
+        margin-top: 10px;
+
+        @include mobile-lg {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    &:hover {
+      .blog-item__description {
+        color: $clr-primary;
+      }
+    }
+
+    &--horiz1 {
+      @include desktop-md {
+        left: -100px;
+      }
+    }
+    &--horiz2 {
+      @include desktop-md {
+        left: -50px;
+      }
+    }
+  }
+
+  &__bgr1 {
+    position: absolute;
+    bottom: -30px;
+    left: -40px;
+    height: 100%;
+  }
+}

@@ -1,0 +1,129 @@
+.hero {
+  padding: 100px 0;
+  margin-bottom: 30px;
+  background-image: url('../images/hero__background.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+  @include wide-screen-md {
+    background-size: 85vw auto;
+    background-position: top right;
+  }
+
+  &__foreground {
+    background-image: url('../images/hero__foreground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    background-position: bottom right;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &__overlay {
+    min-height: 48vh;
+    position: relative;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
+      min-height: 68vh;
+
+    }
+
+    @include desktop-md {
+      min-height: calc(100vh - 200px);
+      margin: 0;
+      padding: 0 10px;
+    }
+
+  }
+
+  &__text-box {
+    background-color: rgba(255, 255, 255, 0.719);
+    padding: 30px;
+
+    @include tablet {
+
+      width: 80%;
+      margin: 0 -10px;
+    }
+
+    @include desktop-md {
+      background-color: inherit;
+      width: 52%;
+    }
+
+  }
+
+  &__title {
+    font-size: 48px;
+    visibility: hidden;
+
+    @include tablet {
+      font-size: 56px;
+    }
+
+    @include desktop-md {
+      font-size: 61px;
+    }
+  }
+
+  &__description {
+    font-size: 24px;
+    line-height: 1.8;
+    color: $clr-black;
+    visibility: hidden;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+
+    .main-cta {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      visibility: hidden;
+
+      @include tablet {
+        margin-bottom: auto;
+
+        &:first-of-type {
+          margin-right: 15px;
+        }
+      }
+
+      @include wide-screen-md {
+        &:first-of-type {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+
+  .ui.ui.ui.container:not(.fluid) {
+    @include tablet {
+      margin-left: 0;
+    }
+
+    @include desktop-md {
+      margin-left: auto;
+    }
+  }
+}

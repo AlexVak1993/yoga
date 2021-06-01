@@ -1,0 +1,22 @@
+.tutorial-video {
+
+  &__container {
+    position: relative;
+    padding-bottom: 55%;
+    height: 0;
+    visibility: hidden;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #AA7466;
+  }
+
+  &--bg1 {
+    background: bottom left/40% no-repeat url('../images/home/elements-abstract-collection-shapes-3.png');
+  }
+}
